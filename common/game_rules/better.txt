@@ -1,0 +1,107 @@
+﻿
+ai_aggression = {
+	default = standard_ai_aggression
+
+	none_ai_aggression = {
+		flag = none_ai_aggression
+	}
+
+	very_low_ai_aggression = {
+		flag = very_low_ai_aggression
+	}
+
+	low_ai_aggression = {
+		flag = low_ai_aggression
+	}
+
+	standard_ai_aggression = {
+	}
+
+	high_ai_aggression = {
+		flag = high_ai_aggression
+	}
+	
+	very_high_ai_aggression = {
+		flag = very_high_ai_aggression
+	}
+}
+
+#trade_center_infrastructure_usages = {
+#	default = default_trade_center_infrastructure_usages
+#
+#	none_trade_center_infrastructure_usages = {
+#		flag = none_trade_center_infrastructure_usages
+#	}
+#
+#	low_trade_center_infrastructure_usages = {
+#		flag = low_trade_center_infrastructure_usages
+#	}
+#
+#	default_trade_center_infrastructure_usages = {
+#	}
+#}
+
+autobuild_expansive_threshold = {
+	default = standard_autobuild_expansive_threshold
+
+
+	low_autobuild_expansive_threshold = {
+		flag = low_autobuild_expansive_threshold
+	}
+
+	standard_autobuild_expansive_threshold = {
+	}
+
+	high_autobuild_expansive_threshold = {
+		flag = high_autobuild_expansive_threshold
+	}
+}
+
+autobuild_cheap_threshold = {
+	default = standard_autobuild_cheap_threshold
+
+
+	low_autobuild_cheap_threshold = {
+		flag = low_autobuild_cheap_threshold
+	}
+
+	standard_autobuild_cheap_threshold = {
+	}
+
+	high_autobuild_cheap_threshold = {
+		flag = high_autobuild_cheap_threshold
+	}
+}
+
+
+autobuild_markt_access_threshold = {
+	default = high_autobuild_markt_access_threshold
+
+
+	low_autobuild_markt_access_threshold = {
+		flag = low_autobuild_markt_access_threshold
+	}
+
+	standard_autobuild_markt_access_threshold = {
+	}
+
+	high_autobuild_markt_access_threshold = {
+		flag = high_autobuild_markt_access_threshold
+	}
+}
+
+autobuild_cash_ratio_threshold = {
+	default = standard_autobuild_cash_ratio_threshold
+
+
+	low_autobuild_cash_ratio_threshold = {
+		flag = low_autobuild_cash_ratio_threshold
+	}
+
+	standard_autobuild_cash_ratio_threshold = {
+	}
+
+	high_autobuild_cash_ratio_threshold = {
+		flag = high_autobuild_cash_ratio_threshold
+	}
+}

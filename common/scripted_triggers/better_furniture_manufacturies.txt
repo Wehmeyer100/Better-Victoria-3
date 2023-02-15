@@ -1,0 +1,97 @@
+﻿better_auto_expand_furniture_manufacturies = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_furniture_manufacturies
+		}
+		better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:fabric }
+		better_market_good_not_cheap = { MARKET_GOOD = mg:furniture }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_handcrafted_furniture
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR =
+					{
+						has_active_production_method = pm_lathe
+						has_active_production_method = pm_mechanized_workshops
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_luxuries
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_luxury_furniture
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:hardwood }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:luxury_furniture }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_precision_tools
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:hardwood }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:luxury_furniture }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_automation_disabled
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_watertube_boiler_building_furniture_manufacturies
+						has_active_production_method = pm_rotary_valve_engine_building_furniture_manufacturies
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_assembly_lines_building_furniture_manufacturies
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+		}
+	}
+}

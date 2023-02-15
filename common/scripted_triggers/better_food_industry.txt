@@ -1,0 +1,110 @@
+﻿better_auto_expand_food_industry = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_food_industry
+		}
+		better_market_good_not_expensive = { MARKET_GOOD = mg:grain }
+		better_market_good_not_cheap = { MARKET_GOOD = mg:groceries }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_bakery
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_sweeteners
+						has_active_production_method = pm_baking_powder
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:sugar }
+			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_disabled_canning
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_cannery
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:fish }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_vacuum_canning
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:fish }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+			}
+		}	
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_disabled_distillery
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_pot_stills
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:sugar }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:liquor }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_patent_stills
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:sugar }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:glass }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:liquor }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_manual_dough_processing
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_automated_bakery
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+			}
+		}
+	}
+}

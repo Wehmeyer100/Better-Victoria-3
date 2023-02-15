@@ -1,0 +1,34 @@
+﻿better_auto_expand_electrics_industry = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_electrics_industry
+		}
+		better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:rubber }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:lead }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+		better_market_good_not_cheap = { MARKET_GOOD = mg:telephones }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_radios
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_radios
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:radios }
+			}
+		}		
+	}
+}

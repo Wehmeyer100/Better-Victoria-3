@@ -1,0 +1,67 @@
+﻿better_auto_expand_steel_mills = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_steel_mills
+		}
+		better_market_good_not_cheap = { MARKET_GOOD = mg:steel }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_blister_steel_process
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_bessemer_process
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_open_hearth_process
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_electric_arc_process
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_automation_disabled
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_watertube_boiler_building_steel_mills
+						has_active_production_method = pm_rotary_valve_engine_building_steel_mills
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+			}
+		}
+	}
+}

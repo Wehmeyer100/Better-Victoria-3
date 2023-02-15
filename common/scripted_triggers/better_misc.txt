@@ -1,0 +1,220 @@
+﻿better_auto_expand_rubber = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_rubber_plantation
+		}
+		
+		better_market_good_not_cheap = { MARKET_GOOD = mg:rubber }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_road_carts
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_rail_transport
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:transportation }
+			}
+		}
+	}
+}
+
+better_auto_expand_fishing_warf = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_fishing_wharf
+		}
+		
+		better_market_good_not_cheap = { MARKET_GOOD = mg:fish }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_simple_fishing
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_fishing_trawlers
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:clippers }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_trawlers
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steamers }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_unrefrigerated
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_refrigerated_storage_building_fishing_wharf
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_refrigerated_rail_cars_building_fishing_wharf
+						has_active_production_method = pm_flash_freezing_building_fishing_wharf
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:transportation }
+			}
+		}
+	}
+}
+
+better_auto_expand_whaling_station = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_whaling_station
+		}
+		
+		better_market_good_not_cheap = { MARKET_GOOD = mg:meat }
+		better_market_good_not_cheap = { MARKET_GOOD = mg:oil }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_wooden_whaling_ships
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:clippers }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_whaling_ships
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steamers }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_unrefrigerated
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_refrigerated_storage_building_whaling_station
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_refrigerated_rail_cars_building_whaling_station
+						has_active_production_method = pm_flash_freezing_building_whaling_station
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:transportation }
+			}
+		}
+	}
+}
+
+better_auto_expand_oil_rig = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_oil_rig
+		}
+		
+		better_market_good_not_cheap = { MARKET_GOOD = mg:oil }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_derricks
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_combustion_derricks
+				}
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_road_carts
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_rail_transport_building_oil_rig
+						has_active_production_method = pm_tanker_cars
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:transportation }
+			}
+		}
+	}
+}

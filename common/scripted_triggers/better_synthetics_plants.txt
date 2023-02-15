@@ -1,0 +1,32 @@
+﻿better_auto_expand_synthetics_plants = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_synthetics_plants
+		}
+		better_market_good_not_cheap = { MARKET_GOOD = mg:dye }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:sulfur }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:fertilizer }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_artificial_fibers
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_rayon
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:silk }
+			}
+		}
+	}
+}

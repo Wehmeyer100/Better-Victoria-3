@@ -1,0 +1,24 @@
+﻿l_english:
+ building_economy_center:0 "Economy Center"
+ 
+ pmg_economy_center_base:0 "Focus"
+ pmg_economy_center_level:0 "Floors"
+ 
+ pm_economy_center_none:0 "Disable"
+ pm_economy_center_bureaucracy:0 "Bureaucracy"
+ pm_economy_center_authority:0 "Authority"
+ pm_economy_center_influence:0 "Influence"
+ pm_economy_center_prestige:0 "Prestige"
+ pm_economy_center_economy_of_scale:0 "Economy of Scale"
+ pm_economy_center_ressource:0 "Ressource"
+ pm_economy_center_farming:0 "Farming"
+ pm_economy_center_manufacturing:0 "Manufacturing"
+ 
+ 
+ pm_economy_center_level_none:0 "Disable"
+ pm_economy_center_level_1:0 "1 Floor"
+ pm_economy_center_level_2:0 "2 Floor"
+ pm_economy_center_level_3:0 "3 Floor"
+ pm_economy_center_level_4:0 "4 Floor"
+ pm_economy_center_level_5:0 "5 Floor"
+ 

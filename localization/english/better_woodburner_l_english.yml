@@ -1,0 +1,18 @@
+﻿l_english:
+ building_woodburner:0 "Woodburner"
+ pmg_base_building_woodburner:0 "Management"
+ pmg_automation_building_woodburner:0 "Automation"
+ pmg_ownership_capital_building_woodburner:0 "Ownership"
+
+ pm_basic_burner:0 "Basic"
+ pm_advanced_burner:0 "Advanced"
+ pm_hardsoft_burner:0 "Hardsoft Mix"
+ 
+ pm_watertube_boiler_building_woodburner:0 "Watertube Boiler"
+ pm_rotary_valve_engine_building_woodburner:0 "Rotary Valve Engine"
+ 
+ pm_merchant_guilds_building_woodburner:0 "Merchant Guilds"
+ pm_privately_owned_building_woodburner:0 "Privately Owned"
+ pm_publicly_traded_building_woodburner:0 "Publicly Owned"
+ pm_government_run_building_woodburner:0 "Government Run"
+ pm_worker_cooperative_building_woodburner:0 "Worker Cooperative"

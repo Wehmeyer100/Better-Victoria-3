@@ -1,0 +1,72 @@
+﻿better_auto_expand_chemical_plants = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_chemical_plants
+		}
+		better_market_good_not_cheap = { MARKET_GOOD = mg:fertilizer }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:sulfur }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_artificial_fertilizers
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_improved_fertilizer
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_nitrogen_fixation
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_explosives_production
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_leblanc_process
+						has_active_production_method = pm_ammonia-soda_process
+						has_active_production_method = pm_vacuum_evaporation
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:explosives }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_brine_electrolysis
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:explosives }
+			}
+		}
+	}
+}

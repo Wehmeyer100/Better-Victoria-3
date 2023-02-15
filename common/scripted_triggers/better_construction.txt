@@ -1,0 +1,51 @@
+﻿default_auto_expand_rule_construction_sector = 
+{
+	better_auto_expand_basic = yes
+	weekly_net_income > 10000
+	OR = 
+	{
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_active_production_method = pm_wooden_buildings
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:fabric }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+		}
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_active_production_method = pm_iron_frame_buildings
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:fabric }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+		}
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_active_production_method = pm_steel_frame_buildings
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:glass }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:explosives }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+		}
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_active_production_method = pm_arc_welded_buildings
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:glass }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:explosives }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+		}
+	}
+}

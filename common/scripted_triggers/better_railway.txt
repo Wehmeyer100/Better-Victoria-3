@@ -1,0 +1,80 @@
+﻿default_auto_expand_rule_railway = 
+{
+	owner = 
+	{
+		OR = 
+		{
+			construction_queue_duration < max_autoexpand_queue_weeks_rail
+			has_wasted_construction = yes
+		}
+	}		
+	state = { better_has_free_workface = yes }
+	building_has_goods_shortage = no
+	OR = 
+	{
+		better_has_market_access = no
+		trigger_if = 
+		{
+			limit = 
+			{
+				better_has_market_access = yes
+			}
+			better_market_good_not_cheap = { MARKET_GOOD = mg:transportation }
+		}
+	}
+	better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+	AND = 
+	{
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_wooden_passenger_carriages
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+			}		
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steel_passenger_carriages
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+			}
+		}
+		OR = 
+		{
+			# pm_steam_trains
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_trains
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+			}
+			
+			# pm_electric_trains
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_electric_trains
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+			
+			# pm_diesel_trains
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_diesel_trains
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+			}
+		}
+	}
+}

@@ -1,0 +1,135 @@
+﻿pm_power_building_coal_mine = {
+	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			building_input_tools_add = 15
+			building_input_electricity_add = 10
+			
+			# output goods
+			building_output_coal_add = 90
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_power_building_iron_mine = {
+	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			building_input_tools_add = 15
+			building_input_electricity_add = 10
+			
+			# output goods
+			building_output_iron_add = 70
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_power_building_lead_mine = {
+	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			building_input_tools_add = 15
+			building_input_electricity_add = 10
+			
+			# output goods
+			building_output_lead_add = 70
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_power_building_sulfur_mine = {
+	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			building_input_tools_add = 15
+			building_input_electricity_add = 10
+			
+			# output goods
+			building_output_sulfur_add = 80
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_power_building_gold_mine = {
+	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			building_input_tools_add = 15
+			building_input_electricity_add = 10
+			
+			# output goods
+			building_output_gold_add = 40
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 500
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 1500
+		}
+	}	
+}

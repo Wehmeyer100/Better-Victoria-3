@@ -1,0 +1,298 @@
+﻿
+better_has_market_access = 
+{
+	exists = state
+	OR = 
+	{
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_game_rule = low_autobuild_markt_access_threshold
+			}
+			state.market_access > better_low_market_access
+		}
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_game_rule = standard_autobuild_markt_access_threshold
+			}
+			state.market_access > better_market_access
+		}
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_game_rule = high_autobuild_markt_access_threshold
+			}
+			state.market_access > better_high_market_access
+		}
+	}
+}
+
+
+better_market_good_delta_overflow = 
+{
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{ 
+			market_goods_delta >= 0 
+		}
+	}
+}
+
+better_market_good_delta_0 = 
+{
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{ 
+			market_goods_delta = 0 
+		}
+	}
+}
+
+better_market_good_delta_underflow = 
+{
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{ 
+			market_goods_delta < 0 
+		}
+	}
+}
+
+better_market_good_shortage = 
+{
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{
+			market_goods_has_goods_shortage = yes
+		}
+	}
+}
+
+better_market_good_cheap = 
+{
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{ 
+			OR =
+			{
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = low_autobuild_cheap_threshold
+					}
+					market_goods_cheaper >= better_low_market_good_cheap_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = standard_autobuild_cheap_threshold
+					}
+					market_goods_cheaper >= better_market_good_cheap_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = high_autobuild_cheap_threshold
+					}
+					market_goods_cheaper >= better_high_market_good_cheap_value
+				}
+			}
+		}
+	}
+}
+
+better_market_good_not_cheap = 
+{
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{ 
+			OR = 
+			{
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = low_autobuild_cheap_threshold
+					}
+					market_goods_cheaper < better_low_market_good_cheap_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = standard_autobuild_cheap_threshold
+					}
+					market_goods_cheaper < better_market_good_cheap_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = high_autobuild_cheap_threshold
+					}
+					market_goods_cheaper < better_high_market_good_cheap_value
+				}
+			}
+		}
+	}
+}
+
+better_market_good_normal = 
+{	
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{ 
+			OR = 
+			{
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = low_autobuild_expansive_threshold
+					}
+					market_goods_pricier > better_low_market_good_expensiv_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = standard_autobuild_expansive_threshold
+					}
+					market_goods_pricier > better_market_good_expensiv_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = high_autobuild_expansive_threshold
+					}
+					market_goods_pricier > better_high_market_good_expensiv_value
+				}
+			}
+			OR = 
+			{
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = low_autobuild_cheap_threshold
+					}
+					market_goods_cheaper > better_low_market_good_cheap_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = standard_autobuild_cheap_threshold
+					}
+					market_goods_cheaper > better_market_good_cheap_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = high_autobuild_cheap_threshold
+					}
+					market_goods_cheaper > better_high_market_good_cheap_value
+				}
+			}
+		}
+	}
+}
+
+better_market_good_expensive = 
+{
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{
+			OR = 
+			{
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = low_autobuild_expansive_threshold
+					}
+					market_goods_pricier >= better_low_market_good_expensiv_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = standard_autobuild_expansive_threshold
+					}
+					market_goods_pricier >= better_market_good_expensiv_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = high_autobuild_expansive_threshold
+					}
+					market_goods_pricier >= better_high_market_good_expensiv_value
+				}
+			}
+		}
+	}
+}
+
+better_market_good_not_expensive = 
+{
+	exists = market
+	market = 
+	{
+		$MARKET_GOOD$ = 
+		{
+			OR = 
+			{
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = low_autobuild_expansive_threshold
+					}
+					market_goods_pricier < better_low_market_good_expensiv_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = standard_autobuild_expansive_threshold
+					}
+					market_goods_pricier < better_market_good_expensiv_value
+				}
+				trigger_if = 
+				{
+					limit = 
+					{
+						has_game_rule = high_autobuild_expansive_threshold
+					}
+					market_goods_pricier < better_high_market_good_expensiv_value
+				}
+			}
+		}
+	}
+}

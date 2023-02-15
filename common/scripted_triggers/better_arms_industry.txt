@@ -1,0 +1,82 @@
+﻿better_auto_expand_arms_industry = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_arms_industry
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_muskets
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:hardwood }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:small_arms }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_rifles
+						has_active_production_method = pm_repeaters
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:hardwood }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:small_arms }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_bolt_action_rifles
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:hardwood }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:small_arms }
+			}
+		}	
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_artillery_production
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_cannons
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:artillery }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_smoothbores
+						has_active_production_method = pm_breech_loaders
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:artillery }
+			}
+		}		
+	}
+}

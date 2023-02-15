@@ -1,0 +1,21 @@
+﻿l_english:
+ better_annex_subject_tooltip:0 "$DIPLO_ACTION_RELATIONS$ For annexation, certain conditions must be met. In principle, it is possible to annex all vassals. Colonies have an increased basic restraint."
+ 
+ better_annex_subject:0 "Annex a Vassal"
+ better_annex_subject_action_name:0 "Annex Vassal"
+ better_annex_subject_action_propose_name:0 "Requests for annexation"
+ better_annex_subject_desc:0 "#header Annex a Vassal#!\n$TOOLTIP_DELIMITER$\n[concept_instant_diplomatic_action] makes sure that you annex your Vassal. All his territories will then belong to you."
+ 
+ better_annex_subject_proposal_notification_name:0 "Suggest 'Annex Vassal'"
+ better_annex_subject_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] proposes to annex our national territory."
+ better_annex_subject_proposal_notification_effects_desc:0 "'Annex Vassal'"
+ 
+ better_annex_subject_proposal_accepted_name:0 "'Annex Vassal' was accepted."
+ better_annex_subject_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] has accepted our proposal to annex their country."
+ better_annex_subject_proposal_declined_name:0 "'Annex Vassal' was refused."
+ better_annex_subject_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] has rejected our proposal to annex their country."
+ 
+ better_annex_subject_proposal_third_party_accepted_name:0 "$better_annex_subject_proposal_accepted_name$"
+ better_annex_subject_proposal_third_party_accepted_desc:0 "[INITIATOR_COUNTRY.GetName] has all the territories of [TARGET_COUNTRY.GetName] annexed."
+ better_annex_subject_proposal_third_party_declined_name:0 "$better_annex_subject_proposal_declined_name$"
+ better_annex_subject_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName] has refused to allow [INITIATOR_COUNTRY.GetName] to annex its territories."

@@ -1,0 +1,6 @@
+﻿l_german:
+ NOT_TRIGGER_MARKET_ACCESS_GREATER_THAN:0 "Der [concept_market_access] in [State.GetName] ist nicht größer als $NUM|%0v$ (derzeit: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_BUILDING_LEVEL_GREATER_THAN:1 "Gebäudestufe ist größer als $TARGET_VALUE|0v$"
+ NOT_TRIGGER_BUILDING_LEVEL_GREATER_OR_EQUAL:1 "Gebäudestufe ist größer oder gleich $TARGET_VALUE|0v$"
+ NOT_TRIGGER_BUILDING_LEVEL_LESS_THAN:1 "Gebäudestufe ist kleiner als $TARGET_VALUE|0v$"
+ NOT_TRIGGER_BUILDING_LEVEL_LESS_OR_EQUAL:1 "Gebäudestufe ist kleiner oder gleich $TARGET_VALUE|0v$"

@@ -1,0 +1,7 @@
+﻿NGame = {
+	MAX_NUMBER_OF_AUTOSAVES = 12 	# The game will only keep the MAX_NUMBER_OF_AUTOSAVES latest autosaves.
+}
+
+NEconomy = {
+	BASE_RESOURCE_DISCOVER_CHANCE = 0.04 		# Per day (1.0 = 1%)
+} 

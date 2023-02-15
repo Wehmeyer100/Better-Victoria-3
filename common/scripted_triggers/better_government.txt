@@ -1,0 +1,45 @@
+﻿default_auto_expand_rule_government_administration = 
+{
+	owner = 
+	{
+		OR = 
+		{
+			construction_queue_duration < max_autoexpand_queue_weeks
+			has_wasted_construction = yes
+		}	
+	}	
+	state = { better_has_free_workface = yes }
+	building_has_goods_shortage = no
+	better_has_market_access = yes
+	weekly_net_income > 5000
+	OR = 
+	{
+		bureaucracy < 0
+		approaching_bureaucracy_shortage = yes
+	}
+	OR = 
+	{
+		has_active_production_method = pm_simple_organization
+		trigger_if = 
+		{
+			limit = 
+			{
+				OR = 
+				{
+					has_active_production_method = pm_horizontal_drawer_cabinets
+					has_active_production_method = pm_vertical_filing_cabinets
+				}
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:paper }
+		}
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_active_production_method = pm_switch_boards
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:paper }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:telephones }
+		}
+	}
+}

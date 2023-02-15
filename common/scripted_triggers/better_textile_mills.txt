@@ -1,0 +1,106 @@
+﻿
+better_auto_expand_textile_mills = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_textile_mills
+		}
+		better_market_good_not_expensive = { MARKET_GOOD = mg:fabric }
+		better_market_good_not_cheap = { MARKET_GOOD = mg:clothes }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_handsewn_clothes
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_dye_workshops
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:dye }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_sewing_machines
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:dye }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_electric_sewing_machines
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:dye }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_luxury_clothes
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_craftsman_sewing
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:silk }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:luxury_clothes }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_elastics
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:rubber }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:silk }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:luxury_clothes }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_traditional_looms
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_mechanized_looms
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_automatic_power_looms
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+		}
+	}
+}

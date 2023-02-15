@@ -1,0 +1,91 @@
+﻿
+better_auto_expand_motor_industry = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_motor_industry
+		}
+		better_market_good_not_cheap = { MARKET_GOOD = mg:engines }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_engines
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_electric_engines
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_diesel_engines
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_automobiles_disabled
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_automobile_production
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:rubber }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+			}
+		}	
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_automation_disabled
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_watertube_boiler_building_motor_industry
+						has_active_production_method = pm_rotary_valve_engine_building_motor_industry
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_assembly_lines_building_motor_industry
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+		}
+	}
+}

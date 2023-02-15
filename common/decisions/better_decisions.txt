@@ -1,0 +1,118 @@
+﻿
+better_recognized_country = 
+{
+	is_shown = 
+	{
+		is_country_type = unrecognized
+		OR = 
+		{
+			country_rank = rank_value:unrecognized_major_power
+			country_rank = rank_value:unrecognized_regional_power
+			country_rank = rank_value:unrecognized_power
+		}
+	}
+
+	possible = 
+	{
+		is_subject = no
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+		OR = 
+		{
+			is_in_customs_union = no
+			AND = 
+			{
+				exists = market
+				market = 
+				{
+					exists = owner
+					owner = root
+				}
+			}
+		}
+		country_rank = rank_value:unrecognized_major_power
+		infamy < 10
+		
+		NOT = 
+		{
+			any_scope_state = 
+			{
+				has_active_building = building_conscription_center
+			}
+		}
+		
+		any_country = 
+		{
+			country_rank = rank_value:great_power
+			relations:root >= relations_threshold:friendly
+		}
+		
+		OR = 
+		{
+			has_law = law_type:law_religious_schools
+			has_law = law_type:law_private_schools
+			has_law = law_type:law_public_schools
+		}
+		
+		OR = 
+		{
+			has_law = law_type:law_charitable_health_system
+			has_law = law_type:law_private_health_insurance
+			has_law = law_type:law_public_health_insurance
+		}
+		
+		NOT = 
+		{ 
+			has_law = law_type:law_migration_controls 
+			has_law = law_type:law_serfdom
+			has_law = law_type:law_isolationism
+			has_law = law_type:law_censorship
+			has_law = law_type:law_debt_slavery
+			has_law = law_type:law_slave_trade
+			has_law = law_type:law_ethnostate
+		}
+		
+		AND = 
+		{
+			has_technology_researched = improved_fertilizer
+			has_technology_researched = steam_donkey
+			has_technology_researched = dynamite
+			has_technology_researched = open_hearth_process
+			has_technology_researched = reinforced_concrete
+			has_technology_researched = rotary_valve_engine
+			has_technology_researched = steel_railway_cars
+			has_technology_researched = shift_work
+			has_technology_researched = vacuum_canning
+			has_technology_researched = rubber_mastication
+			has_technology_researched = gantry_cranes
+			has_technology_researched = ironclad_tech
+			has_technology_researched = jeune_ecole
+			has_technology_researched = modern_nursing
+			has_technology_researched = enlistment_offices
+			has_technology_researched = electric_telegraph
+			has_technology_researched = breech_loading_artillery
+			has_technology_researched = repeaters
+			has_technology_researched = modern_sewerage
+			has_technology_researched = postal_savings
+			has_technology_researched = central_banking
+			has_technology_researched = central_archives
+			has_technology_researched = nationalism
+			has_technology_researched = egalitarianism
+			has_technology_researched = pharmaceuticals
+			has_technology_researched = realism
+			has_technology_researched = dialectics
+			has_technology_researched = psychiatry
+		}
+	}
+	
+	when_taken = 
+	{
+		set_country_type = recognized
+		change_infamy = 25
+	}
+
+	ai_chance = 
+	{	
+		base = 2000	
+	}
+}

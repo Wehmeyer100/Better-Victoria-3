@@ -1,0 +1,92 @@
+﻿
+better_auto_expand_shipyards = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_shipyards
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_basic_shipbuilding
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:fabric }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:clippers }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_complex_shipbuilding
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:hardwood }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:fabric }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:clippers }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_metal_shipbuilding
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:steamers }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_arc_welding_shipbuilding
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:steamers }
+			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_military_shipbuilding
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_military_shipbuilding_wooden
+						has_active_production_method = pm_military_shipbuilding_wooden_2
+					}
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:manowars }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_military_shipbuilding_steam
+						has_active_production_method = pm_military_shipbuilding_steam_2
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:ironclads }
+			}
+		}	
+	}
+}

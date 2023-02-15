@@ -1,0 +1,2 @@
+﻿l_english:
+ NOT_TRIGGER_MARKET_ACCESS_GREATER_THAN:0 "[concept_market_access] in [State.GetName] is not greater than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"

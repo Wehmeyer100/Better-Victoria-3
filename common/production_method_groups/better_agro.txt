@@ -1,0 +1,29 @@
+﻿pmg_secondary_building_rice_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_secondary
+		pm_fig_orchards
+		pm_better_fruit
+		pm_better_suger
+	}
+}
+
+pmg_secondary_building_millet_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_secondary
+		pm_fig_orchards
+		pm_better_fruit
+		pm_better_suger
+	}
+}
+
+pmg_better_fertilizer = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_better_simple_farming
+		pm_better_soil_enriching_farming
+		pm_better_fertilization
+		pm_better_chemical_fertilizer
+	}
+}

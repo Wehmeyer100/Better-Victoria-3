@@ -1,0 +1,21 @@
+﻿l_german:
+ better_annex_subject_tooltip:0 "$DIPLO_ACTION_RELATIONS$ Für die annektierung müssen bestimmte vorraussetungen erfüllt werden. Grundsätlich ist es mögliche alle Vassallen zu annektieren. Kolonien haben einen erhöte Grundzurückhaltung."
+ 
+ better_annex_subject:0 "Annektiere ein Vassal"
+ better_annex_subject_action_name:0 "Vassal annektieren"
+ better_annex_subject_action_propose_name:0 "Anfragen zur Annektion"
+ better_annex_subject_desc:0 "#header Annektiere ein Vassal#!\n$TOOLTIP_DELIMITER$\n[concept_instant_diplomatic_action] sorgt dafür dass du dein Vassal anektierst. Alle seine Territorien gehören dann dir."
+ 
+ better_annex_subject_proposal_notification_name:0 "Schlage 'Vassal annektieren' vor"
+ better_annex_subject_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] schlägt vor, unser Staatsgebiet zu annektieren."
+ better_annex_subject_proposal_notification_effects_desc:0 "'Vassal annektieren'"
+ 
+ better_annex_subject_proposal_accepted_name:0 "'Vassal annektieren' wurde angenommen."
+ better_annex_subject_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] hat unseren Vorschlag zur Annexion ihres Landes angenommen."
+ better_annex_subject_proposal_declined_name:0 "'Vassal annektieren' wurde abgelehnt."
+ better_annex_subject_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] hat unseren Vorschlag zur Annexion ihres Landes abgelehnt."
+ 
+ better_annex_subject_proposal_third_party_accepted_name:0 "$better_annex_subject_proposal_accepted_name$"
+ better_annex_subject_proposal_third_party_accepted_desc:0 "[INITIATOR_COUNTRY.GetName] hat alle Territorien von [TARGET_COUNTRY.GetName] annektiert."
+ better_annex_subject_proposal_third_party_declined_name:0 "$better_annex_subject_proposal_declined_name$"
+ better_annex_subject_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName] hat es abgelehnt,dass [INITIATOR_COUNTRY.GetName] seine Gebiete annektiert."

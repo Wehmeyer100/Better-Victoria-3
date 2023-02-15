@@ -1,0 +1,172 @@
+﻿better_auto_expand_farm = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			OR = 
+			{
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_rice_farm
+				is_building_type = building_maize_farm
+				is_building_type = building_millet_farm
+			}
+		}
+		
+		better_market_good_not_cheap = { MARKET_GOOD = mg:grain }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_simple_farming
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_soil_enriching_farming
+						has_active_production_method = pm_fertilization
+						has_active_production_method = pm_chemical_fertilizer
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:fertilizer }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_tools_disabled
+				}
+			}
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_tools
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+			}
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_threshers
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+			}
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_tractors
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+			}
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_compression_ignition_tractors
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_secondary
+				}
+			}
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_potatoes
+					}
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:liquor }
+			}
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_apple_orchards
+					}
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:fruit }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:sugar }
+			}
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_citrus_orchards
+						has_active_production_method = pm_fig_orchards
+					}
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:fruit }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:sugar }
+			}
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_vineyards
+						has_active_production_method = pm_vineyards_building_maize_farm
+					}
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:wine }
+			}
+			
+			
+			
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_better_fruit
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:fruit }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_better_suger
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:sugar }
+			}
+		}
+	}
+}

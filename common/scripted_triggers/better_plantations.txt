@@ -1,0 +1,154 @@
+﻿better_auto_expand_plantations = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			OR = 
+			{
+				is_building_type = building_coffee_plantation
+				is_building_type = building_cotton_plantation
+				is_building_type = building_dye_plantation
+				is_building_type = building_opium_plantation
+				is_building_type = building_tea_plantation
+				is_building_type = building_tobacco_plantation
+				is_building_type = building_sugar_plantation
+				is_building_type = building_banana_plantation
+				is_building_type = building_silk_plantation
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_coffee_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:coffee }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_cotton_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:fabric }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_dye_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:dye }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_opium_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:opium }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_tea_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:tea }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_tobacco_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:tobacco }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_sugar_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:sugar }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_banana_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:fruit }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_silk_plantation
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:silk }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = default_building_coffee_plantation
+						has_active_production_method = default_building_cotton_plantation
+						has_active_production_method = default_building_dye_plantation
+						has_active_production_method = default_building_opium_plantation
+						has_active_production_method = default_building_tea_plantation
+						has_active_production_method = default_building_tobacco_plantation
+						has_active_production_method = default_building_sugar_plantation
+						has_active_production_method = default_building_banana_plantation
+						has_active_production_method = default_building_silk_plantation
+					}
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = automatic_irrigation_building_coffee_plantation
+						has_active_production_method = automatic_irrigation_building_cotton_plantation
+						has_active_production_method = automatic_irrigation_building_dye_plantation
+						has_active_production_method = automatic_irrigation_building_opium_plantation
+						has_active_production_method = automatic_irrigation_building_tea_plantation
+						has_active_production_method = automatic_irrigation_building_tobacco_plantation
+						has_active_production_method = automatic_irrigation_building_sugar_plantation
+						has_active_production_method = automatic_irrigation_building_banana_plantation
+						has_active_production_method = automatic_irrigation_building_silk_plantation
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_road_carts
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_rail_transport
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:transportation }
+			}
+		}
+	}
+}

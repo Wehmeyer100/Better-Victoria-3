@@ -1,0 +1,34 @@
+﻿better_auto_expand_war_machine_industry = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_war_machine_industry
+		}
+		better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:hardwood }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:fabric }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+		better_market_good_not_cheap = { MARKET_GOOD = mg:aeroplanes }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_tank_production
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_tank_production
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:steel }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:tanks }
+			}
+		}		
+	}
+}

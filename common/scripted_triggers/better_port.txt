@@ -1,0 +1,40 @@
+﻿default_auto_expand_rule_port = 
+{
+	better_auto_expand_basic = yes
+	weekly_net_income > 2500
+	OR = 
+	{
+		has_active_production_method = pm_basic_port
+		has_active_production_method = pm_industrial_port
+		has_active_production_method = pm_modern_port
+	}
+	OR = 
+	{
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_active_production_method = pm_basic_port
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:clippers }
+		}
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_active_production_method = pm_industrial_port
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:steamers }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+		}
+		trigger_if = 
+		{
+			limit = 
+			{
+				has_active_production_method = pm_modern_port
+			}
+			better_market_good_not_expensive = { MARKET_GOOD = mg:steamers }
+			better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+		}
+	}
+}

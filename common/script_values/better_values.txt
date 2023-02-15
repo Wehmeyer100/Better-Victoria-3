@@ -1,0 +1,29 @@
+﻿max_autoexpand_queue_weeks_rail = 35
+max_autoexpand_queue_weeks_port = 35
+max_autoexpand_queue_weeks_construction = 16
+max_autoexpand_queue_weeks_government_administration = 16
+max_autoexpand_queue_weeks_university = 25
+
+better_low_cash_reserves_ratio = 0.25
+better_cash_reserves_ratio = 0.5
+better_high_cash_reserves_ratio = 0.75
+
+better_weekly_profit = 0
+better_unemployment_rate = 0.02
+
+better_low_market_access = 0.80
+better_market_access = 0.90
+better_high_market_access = 0.95
+
+better_low_market_good_cheap_value = 0.20
+better_market_good_cheap_value = 0.35
+better_high_market_good_cheap_value = 0.50
+
+better_low_market_good_expensiv_value = 0.20
+better_market_good_expensiv_value = 0.35
+better_high_market_good_expensiv_value = 0.50
+
+better_state_max_port_level = 
+{
+	value = modifier:state_building_port_max_level_add
+}

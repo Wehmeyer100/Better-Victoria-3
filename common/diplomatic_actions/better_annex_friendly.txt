@@ -1,0 +1,276 @@
+﻿better_annex_subject = 
+{
+    requires_approval = yes
+    should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	
+	
+    potential = 
+	{
+		NOT = { is_country_type = decentralized }
+		scope:target_country = 
+		{
+			NOT = { is_country_type = decentralized }
+            is_direct_subject_of = root
+		}
+	}
+	
+    possible = 
+	{
+        is_at_war = no
+		is_revolutionary = no
+		
+		scope:target_country = { is_at_war = no }
+		scope:target_country = { is_revolutionary = no }
+		
+		government_legitimacy > 50
+		
+        custom_tooltip =
+		{
+			text = better_annex_subject_tooltip
+        }
+    }
+	
+    accept_effect = 
+	{
+        annex = scope:target_country
+		change_infamy = 25
+    }
+	
+	
+    ai = 
+	{
+        will_propose = 
+		{
+            always = no
+        }
+		
+        accept_score = 
+		{
+            value = 0
+			
+			add = 
+			{
+				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
+				value = -200
+			}
+			
+			
+			if = 
+			{
+				limit = { has_truce_with = scope:actor }
+				add = 
+				{
+					desc = "DIPLOMATIC_ACCEPTANCE_TRUCE"
+					value = -1000
+				}	
+			}
+			
+			add = 
+			{
+				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+				value = 0
+				if = 
+				{
+					limit = { scope:actor = { country_rank > root.country_rank } }
+					value = 100
+				}
+				
+				if = 
+				{
+					limit = { scope:actor = { country_rank < root.country_rank } }
+					value = -100
+				}				
+			}
+			
+			if = 
+			{
+				limit = 
+				{
+					"scope:actor.ai_ideological_opinion(root)" > 0
+				}
+				add = 
+				{
+					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION"
+					value = "scope:actor.ai_ideological_opinion(root)"
+					multiply = -0.25
+					multiply = 10
+					min = -50
+				}					
+			}
+			else_if = 
+			{
+				limit = 
+				{
+					"scope:actor.ai_ideological_opinion(root)" < 0
+				}
+				add = 
+				{
+					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION_NEGATIVE"
+					value = "scope:actor.ai_ideological_opinion(root)"
+					multiply = -0.25
+					multiply = 10
+					max = 50
+				}					
+			}
+			
+			add = 
+			{
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"	
+				if = 
+				{
+					limit = { "relations(scope:actor)" < relations_threshold:cordial }
+					value = -50
+				}	
+				
+				else_if = 
+				{
+					limit = 
+					{
+						"relations(scope:actor)" >= relations_threshold:cordial
+						"relations(scope:actor)" < relations_threshold:amicable
+					}
+					value = 25
+				}	
+				
+				else_if = 
+				{
+					limit = 
+					{
+						"relations(scope:actor)" >= relations_threshold:amicable
+						"relations(scope:actor)" < relations_threshold:friendly
+					}
+					value = 50
+				}	
+				
+				else_if = 
+				{
+					limit = { "relations(scope:actor)" >= relations_threshold:friendly }
+					value = 100
+				}				
+			}
+			
+			add = 
+			{
+				desc = "DIPLOMATIC_ACCEPTANCE_ARMY_STRENGTH"
+				value = "scope:actor.ai_army_comparison(root)"
+				add = 0.5
+				multiply = 5
+				min = -50
+				max = 50
+			}
+			
+			add = 
+			{
+				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+				value = 0
+				if = 
+				{
+					limit = 
+					{
+						OR = 
+						{
+							has_attitude = 
+							{
+								who = scope:actor
+								attitude = protective
+							}
+							has_attitude = 
+							{
+								who = scope:actor
+								attitude = domineering
+							}							
+						}
+					}
+					value = 100
+				}
+				if = 
+				{
+					limit = 
+					{
+						has_attitude = 
+						{
+							who = scope:actor
+							attitude = genial
+						}
+					}
+					add = 100
+				}				
+				else_if = 
+				{
+					limit = 
+					{
+						OR = 
+						{
+							has_attitude = 
+							{
+								who = scope:actor
+								attitude = conciliatory
+							}	
+							has_attitude = 
+							{
+								who = scope:actor
+								attitude = cooperative
+							}							
+						}
+					}
+					add = 50
+				}
+				else_if = 
+				{
+					limit = 
+					{
+						has_attitude = 
+						{
+							who = scope:actor
+							attitude = cautious
+						}
+					}
+					add = -50
+				}
+				else_if = 
+				{
+					limit = 
+					{
+						OR = 
+						{
+							has_attitude = 
+							{
+								who = scope:actor
+								attitude = antagonistic
+							}
+							has_attitude = 
+							{
+								who = scope:actor
+								attitude = belligerent
+							}
+							has_attitude = 
+							{
+								who = scope:actor
+								attitude = rebellious
+							}
+						}
+					}
+					add = -100
+				}
+			}
+			
+			add = 
+			{
+				desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
+				value = "scope:actor.infamy"
+				multiply = -1
+				max = 100
+			}	
+
+			add = 
+			{
+				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
+				value = "scope:actor.ai_gdp_comparison(root)"
+				multiply = 10
+				min = -100
+				max = 100
+			}			
+        }
+    }
+}

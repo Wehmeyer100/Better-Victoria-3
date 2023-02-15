@@ -1,0 +1,12 @@
+{
+  "name" : "Better Victoria 3 - Autobuild Beta 1.2",
+  "id" : "2931889759",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

@@ -1,0 +1,93 @@
+﻿better_auto_expand_glassworks = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_glassworks
+		}
+		better_market_good_not_cheap = { MARKET_GOOD = mg:glass }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_forest_glass
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_leaded_glass
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:lead }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_crystal_glass
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:lead }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_houseware_plastics
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:lead }
+			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_disabled_ceramics
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_ceramics
+						has_active_production_method = pm_bone_china
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:dye }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:porcelain }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_manual_glassblowing
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_automatic_bottle_blowers
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+			}
+		}
+	}
+}

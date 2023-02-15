@@ -1,0 +1,200 @@
+﻿better_auto_expand_mines = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			OR = 
+			{
+				is_building_type = building_coal_mine
+				is_building_type = building_iron_mine
+				is_building_type = building_lead_mine
+				is_building_type = building_sulfur_mine
+				is_building_type = building_gold_mine
+			}
+		}
+		better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_coal_mine
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:coal }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_iron_mine
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:iron }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_lead_mine
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:lead }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_sulfur_mine
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:sulfur }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					is_building_type = building_gold_mine
+				}
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_picks_and_shovels_building_coal_mine
+						has_active_production_method = pm_atmospheric_engine_pump_building_coal_mine
+						has_active_production_method = pm_condensing_engine_pump_building_coal_mine
+						
+						has_active_production_method = pm_picks_and_shovels_building_iron_mine
+						has_active_production_method = pm_atmospheric_engine_pump_building_iron_mine
+						has_active_production_method = pm_condensing_engine_pump_building_iron_mine
+						
+						has_active_production_method = pm_picks_and_shovels_building_lead_mine
+						has_active_production_method = pm_atmospheric_engine_pump_building_lead_mine
+						has_active_production_method = pm_condensing_engine_pump_building_lead_mine
+						
+						has_active_production_method = pm_picks_and_shovels_building_sulfur_mine
+						has_active_production_method = pm_atmospheric_engine_pump_building_sulfur_mine
+						has_active_production_method = pm_condensing_engine_pump_building_sulfur_mine
+						
+						has_active_production_method = pm_picks_and_shovels_building_gold_mine
+						has_active_production_method = pm_atmospheric_engine_pump_building_gold_mine
+						has_active_production_method = pm_condensing_engine_pump_building_gold_mine
+					}
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_diesel_pump_building_coal_mine
+						has_active_production_method = pm_diesel_pump_building_iron_mine
+						has_active_production_method = pm_diesel_pump_building_lead_mine
+						has_active_production_method = pm_diesel_pump_building_sulfur_mine
+						has_active_production_method = pm_diesel_pump_building_gold_mine
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:oil }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_power_building_coal_mine
+						has_active_production_method = pm_power_building_iron_mine
+						has_active_production_method = pm_power_building_lead_mine
+						has_active_production_method = pm_power_building_sulfur_mine
+						has_active_production_method = pm_power_building_gold_mine
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_explosives
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_nitroglycerin_building_coal_mine
+						has_active_production_method = pm_dynamite_building_coal_mine
+						
+						has_active_production_method = pm_nitroglycerin_building_iron_mine
+						has_active_production_method = pm_dynamite_building_iron_mine
+						
+						has_active_production_method = pm_nitroglycerin_building_lead_mine
+						has_active_production_method = pm_dynamite_building_lead_mine
+						
+						has_active_production_method = pm_nitroglycerin_building_sulfur_mine
+						has_active_production_method = pm_dynamite_building_sulfur_mine
+						
+						has_active_production_method = pm_nitroglycerin_building_gold_mine
+						has_active_production_method = pm_dynamite_building_gold_mine
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:explosives }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_no_steam_automation
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_donkey_building_coal_mine
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_steam_donkey_mine
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:engines }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_road_carts
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_rail_transport_mine
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:transportation }
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+﻿pmg_economy_center_base = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_economy_center_none
+		pm_economy_center_bureaucracy
+		pm_economy_center_authority
+		pm_economy_center_influence
+		pm_economy_center_prestige
+		pm_economy_center_economy_of_scale
+		pm_economy_center_ressource
+		pm_economy_center_farming
+		pm_economy_center_manufacturing
+	}
+}
+
+pmg_economy_center_level = {
+	texture = "gfx/interface/icons/generic_icons/gdp.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_economy_center_level_none
+		pm_economy_center_level_1
+		pm_economy_center_level_2
+		pm_economy_center_level_3
+		pm_economy_center_level_4
+		pm_economy_center_level_5
+	}
+}

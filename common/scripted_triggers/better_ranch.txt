@@ -1,0 +1,119 @@
+﻿better_auto_expand_ranch = 
+{
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_livestock_ranch
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_simple_ranch
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:fabric }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_intensive_grazing_ranch
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:grain }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:fabric }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:fertilizer }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_open_air_stockyards
+				}
+				better_market_good_not_cheap = { MARKET_GOOD = mg:meat }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_butchering_tools
+						has_active_production_method = pm_slaughterhouses
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:meat }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_mechanized_slaughtering
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:tools }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:coal }
+				better_market_good_not_cheap = { MARKET_GOOD = mg:meat }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_standard_fences
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_barbed_wire_fences
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_electric_fencing
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:iron }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+		}
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_unrefrigerated
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_refrigerated_storage_building_livestock_ranch
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					has_active_production_method = pm_refrigerated_rail_cars_building_livestock_ranch
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+				better_market_good_not_expensive = { MARKET_GOOD = mg:transportation }
+			}
+		}
+	}
+}

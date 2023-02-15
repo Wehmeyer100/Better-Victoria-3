@@ -1,0 +1,18 @@
+﻿default_auto_expand_rule_university = 
+{
+	owner = 
+	{
+		OR = 
+		{
+			construction_queue_duration < max_autoexpand_queue_weeks_university
+			has_wasted_construction = yes
+		}
+	}		
+	
+	state = { better_has_free_workface = yes }
+	building_has_goods_shortage = no
+	better_has_market_access = yes
+	
+	weekly_net_income > 5000
+	better_market_good_not_expensive = { MARKET_GOOD = mg:paper }
+}

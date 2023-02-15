@@ -1,0 +1,114 @@
+﻿pm_better_fruit = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = -15
+			building_output_fruit_add = 15
+		}
+	}
+}	
+
+pm_better_suger = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = -15
+			building_output_sugar_add = 15
+		}
+	}
+}	
+
+pm_better_simple_farming = {
+	is_default = yes
+	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
+	building_modifiers = {
+		unscaled = {
+			building_throughput_mult = 0.15
+		}
+
+		level_scaled = {
+			# earnings														
+			building_employment_laborers_add = 4000
+			building_employment_farmers_add = 600
+			building_employment_clergymen_add = 300
+		}
+	}
+}
+
+pm_better_soil_enriching_farming= {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 5			
+		}		
+		
+		unscaled = {
+			building_throughput_mult = 0.4
+		}
+
+		level_scaled = {
+			# earnings														
+			building_employment_laborers_add = 3800
+			building_employment_farmers_add = 800
+			building_employment_clergymen_add = 300
+		}
+	}
+}
+
+pm_better_fertilization = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 15		
+		}
+		
+		unscaled = {
+			building_throughput_mult = 0.75
+		}
+
+		level_scaled = {
+			# earnings														
+			building_employment_laborers_add = 3600
+			building_employment_farmers_add = 1000
+			building_employment_clergymen_add = 300
+		}
+	}
+}
+
+pm_better_chemical_fertilizer= {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods												   
+			building_input_fertilizer_add = 40		
+		}		
+		
+		unscaled = {
+			building_throughput_mult = 1.00
+		}
+
+		level_scaled = {
+			# earnings														
+			building_employment_laborers_add = 3400
+			building_employment_farmers_add = 1200
+			building_employment_clergymen_add = 300
+		}
+	}
+}	

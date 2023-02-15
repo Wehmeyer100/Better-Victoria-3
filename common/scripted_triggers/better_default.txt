@@ -1,0 +1,71 @@
+﻿default_auto_expand_rule = 
+{	
+	better_auto_expand_basic = yes
+	trigger_if = 
+	{
+		limit = 
+		{
+			better_auto_expand_supported_buildings = yes
+		}
+		OR = 
+		{
+			better_auto_expand_farm = yes
+			better_auto_expand_ranch = yes
+			better_auto_expand_mines = yes
+			better_auto_expand_plantations = yes
+			better_auto_expand_forestry = yes
+			better_auto_expand_rubber = yes
+			better_auto_expand_fishing_warf = yes
+			better_auto_expand_whaling_station = yes
+			better_auto_expand_oil_rig = yes
+			better_auto_expand_food_industry = yes
+			better_auto_expand_textile_mills = yes
+			better_auto_expand_furniture_manufacturies = yes
+			better_auto_expand_glassworks = yes
+			better_auto_expand_tooling_workshops = yes
+			better_auto_expand_paper_mills = yes
+			better_auto_expand_chemical_plants = yes
+			better_auto_expand_synthetics_plants = yes
+			better_auto_expand_steel_mills = yes
+			better_auto_expand_motor_industry = yes
+			better_auto_expand_shipyards = yes
+			better_auto_expand_war_machine_industry = yes
+			better_auto_expand_electrics_industry = yes
+			better_auto_expand_arms_industry = yes
+			better_auto_expand_munition_plants = yes
+			better_auto_expand_arts_academy = yes
+			better_auto_expand_power = yes
+		}
+	}
+}
+
+better_auto_expand_basic = 
+{
+	owner = 
+	{
+		OR = 
+		{
+			construction_queue_duration < max_autoexpand_queue_weeks
+			has_wasted_construction = yes
+		}	
+	}	
+	state = { better_has_free_workface = yes }
+	building_has_goods_shortage = no
+	better_has_market_access = yes
+	better_building_is_profitable = yes
+}
+
+better_auto_expand_munition_plants = 
+{	
+	trigger_if = 
+	{
+		limit = 
+		{
+			is_building_type = building_munition_plants
+		}
+		
+		better_market_good_not_expensive = { MARKET_GOOD = mg:explosives }
+		better_market_good_not_expensive = { MARKET_GOOD = mg:lead }
+		better_market_good_not_cheap = { MARKET_GOOD = mg:ammunition }	
+	}
+}
