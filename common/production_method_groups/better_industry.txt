@@ -7,3 +7,12 @@
 		pm_fully_steel
 	}
 }
+
+pmg_better_building_electric = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_better_elec_none
+		pm_better_elec_simple
+		pm_better_elec_complex
+	}
+}

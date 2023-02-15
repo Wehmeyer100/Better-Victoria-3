@@ -12,9 +12,7 @@ building_government_administration = {
 	production_method_groups = {
 		pmg_base_building_government_administration
 		pmg_government_administration_bureaucrat_professionalism
-		pmg_government_administration_religious_administration#		
-		pmg_economy_center_base
-		#pmg_economy_center_level
+		pmg_government_administration_religious_administration
 	}
 
 	texture = "gfx/interface/icons/building_icons/building_government_administration.dds"
@@ -25,22 +23,29 @@ building_government_administration = {
 	}
 }
 
-#building_economy_center = {
-#	building_group = bg_bureaucracy
-#	city_type = none
-#
-#	unlocking_technologies = {
-#		stock_exchange
-#	}
-#
-#	production_method_groups = {
-#		pmg_economy_center_base
-#		pmg_economy_center_level
-#	}
-#
-#	texture = "gfx/interface/icons/building_icons/building_government_administration.dds"
-#	required_construction = construction_cost_high
-#}
+building_economy_center = {
+	building_group = bg_bureaucracy
+	city_type = none
+
+	unlocking_technologies = {
+		stock_exchange
+	}
+
+	production_method_groups = {
+		pmg_economy_center_base
+		pmg_economy_center_level
+	}
+
+	texture = "gfx/interface/icons/building_icons/building_government_administration.dds"
+	required_construction = construction_cost_high
+	
+	can_build_private = {
+		error_check = {
+			severity = potential
+			always = no
+		}
+	}	
+}
 
 building_university = {
 	building_group = bg_technology

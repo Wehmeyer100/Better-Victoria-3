@@ -15,7 +15,7 @@
  pm_economy_center_manufacturing:0 "Manufacturing"
  
  
- pm_economy_center_level_none:0 "Disable"
+ pm_economy_center_level_none:0 "Ground Floor"
  pm_economy_center_level_1:0 "1 Floor"
  pm_economy_center_level_2:0 "2 Floor"
  pm_economy_center_level_3:0 "3 Floor"

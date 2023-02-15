@@ -77,11 +77,9 @@ template map_list_panels {
 	recruit_commanders_map_list_panel = {}
 }
 
-### ++++ compatibility with "More Spreadsheets"
 template outliner_size {
 	size = { 360 0 }
 }
-### ====
 
 widget = {
 	size = { 100% 100% }
@@ -129,7 +127,7 @@ widget = {
 					visible = "[And( And( Not( IsPauseMenuShown ), Not( IsGameOverScreenShown )), GetMetaPlayer.GetPlayedOrObservedCountry.IsValid)]"
 					layoutpolicy_horizontal = preferred
 					layoutpolicy_vertical = expanding
-					margin_top = 45 #margin construction info
+					margin_top = 70 #margin construction info
 					
 					### ++++
 					hbox = {
@@ -593,7 +591,7 @@ widget = {
 			textbox = {
 				visible = "[Country.IsValid]"
 				parentanchor = hcenter
-				text = "#BOLD [Country.GetNameNoFormatting]#!"
+				raw_text = "#BOLD [Country.GetNameNoFormatting]#!"
 				autoresize = yes
 				align = nobaseline
 				fontsize = 100

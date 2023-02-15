@@ -1,0 +1,5 @@
+﻿l_english:
+ pmg_better_building_electric:0 "Electricity Process"
+ pm_better_elec_none:0 "None"
+ pm_better_elec_simple:0 "Simple Electricity"
+ pm_better_elec_complex:0 "Complex Electricity"

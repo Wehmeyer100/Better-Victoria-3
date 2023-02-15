@@ -33,7 +33,7 @@ pm_economy_center_bureaucracy =
 		}	
 		level_scaled = {
 			#
-			building_employment_bureaucrats_add = 12500
+			building_employment_bureaucrats_add = 10000
 		}	
 	}
 }
@@ -62,7 +62,7 @@ pm_economy_center_authority =
 		}	
 		level_scaled = {
 			#
-			building_employment_bureaucrats_add = 12500
+			building_employment_bureaucrats_add = 10000
 		}	
 	}
 }
@@ -91,7 +91,7 @@ pm_economy_center_influence =
 		}	
 		level_scaled = {
 			#
-			building_employment_bureaucrats_add = 12500
+			building_employment_bureaucrats_add = 10000
 		}	
 	}
 }
@@ -120,7 +120,7 @@ pm_economy_center_prestige =
 		}	
 		level_scaled = {
 			#
-			building_employment_bureaucrats_add = 12500
+			building_employment_bureaucrats_add = 10000
 		}	
 	}
 }
@@ -149,7 +149,7 @@ pm_economy_center_economy_of_scale =
 		}	
 		level_scaled = {
 			#
-			building_employment_bureaucrats_add = 12500
+			building_employment_bureaucrats_add = 10000
 		}	
 	}
 }
@@ -182,7 +182,7 @@ pm_economy_center_ressource =
 		}	
 		level_scaled = {
 			#
-			building_employment_bureaucrats_add = 12500
+			building_employment_bureaucrats_add = 10000
 		}	
 	}
 }
@@ -213,7 +213,7 @@ pm_economy_center_farming =
 		}	
 		level_scaled = {
 			#
-			building_employment_bureaucrats_add = 12500
+			building_employment_bureaucrats_add = 10000
 		}	
 	}
 }
@@ -244,7 +244,7 @@ pm_economy_center_manufacturing =
 		}	
 		level_scaled = {
 			#
-			building_employment_bureaucrats_add = 12500
+			building_employment_bureaucrats_add = 10000
 		}	
 	}
 }
@@ -252,76 +252,87 @@ pm_economy_center_manufacturing =
 
 pm_economy_center_level_none = 
 {
-	texture = "gfx/interface/icons/generic_icons/red_cross.dds"
+	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
 	is_default = yes
 	
-	building_modifiers = 
-	{
+	building_modifiers = {	
+		level_scaled = {
+			building_employment_bureaucrats_add = 2500
+		}
 	}
 }
 
 
 pm_economy_center_level_1 = 
 {
-	texture = "gfx/interface/icons/generic_icons/coin_icon_02.dds"	
+	texture = "gfx/interface/icons/production_method_icons/unused/base_2.dds"
+	building_modifiers = {	
+		level_scaled = {
+			building_employment_bureaucrats_add = 5000
+		}
+		unscaled = {
+			building_input_mult = 0.4
+			building_throughput_mult = 0.50
+		}
+	}	
 }
 
 pm_economy_center_level_2 = 
 {
-	texture = "gfx/interface/icons/generic_icons/coin_icon_05.dds"
+	texture = "gfx/interface/icons/production_method_icons/unused/base_3.dds"
 	
 	building_modifiers = {	
 		level_scaled = {
-			building_employment_bureaucrats_add = 15000
+			building_employment_bureaucrats_add = 12500
 		}
 		unscaled = {
 			building_input_mult = 0.8
-			building_output_mult = 1.0
+			building_throughput_mult = 1.00
 		}
 	}	
 }
 
 pm_economy_center_level_3 = 
 {
-	texture = "gfx/interface/icons/generic_icons/coin_icon_07.dds"
+	texture = "gfx/interface/icons/production_method_icons/unused/base_4.dds"
 	
 	building_modifiers = {	
 		level_scaled = {
-			building_employment_bureaucrats_add = 22500
+			building_employment_bureaucrats_add = 20000
 		}
 		unscaled = {
 			building_input_mult = 1.8
-			building_output_mult = 2.0
+			building_throughput_mult = 2.00
 		}
 	}	
 }
 
 pm_economy_center_level_4 = 
 {
-	texture = "gfx/interface/icons/generic_icons/coin_icon_10.dds"
+	texture = "gfx/interface/icons/production_method_icons/unused/base5.dds"
 	
 	building_modifiers = {	
 		level_scaled = {
-			building_employment_bureaucrats_add = 40000
+			building_employment_bureaucrats_add = 35000
 		}
 		unscaled = {
 			building_input_mult = 2.5
-			building_output_mult = 3.0
+			building_throughput_mult = 3.0
 		}
 	}	
 }
 
 pm_economy_center_level_5 = 
 {
-	texture = "gfx/interface/icons/generic_icons/coin_icon_13.dds"
+	texture = "gfx/interface/icons/production_method_icons/unused/base6.dds"
 	
 	building_modifiers = {	
 		level_scaled = {
-			building_employment_bureaucrats_add = 60000
+			building_employment_bureaucrats_add = 50000
 		}
 		unscaled = {
 			building_input_mult = 3.0
-			building_output_mult = 4.0
+			building_throughput_mult = 4.0
 		}
 	}	
 }
