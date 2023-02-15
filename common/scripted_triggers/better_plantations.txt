@@ -92,6 +92,35 @@
 				better_market_good_not_cheap = { MARKET_GOOD = mg:silk }
 			}
 		}
+		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						has_active_production_method = pm_simple_farming
+						has_active_production_method = pm_better_simple_farming
+					}
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_better_soil_enriching_farming
+						has_active_production_method = pm_better_fertilization
+						has_active_production_method = pm_better_chemical_fertilizer
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:fertilizer }
+			}
+		}
+		
 		OR = 
 		{
 			trigger_if = 

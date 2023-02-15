@@ -21,7 +21,12 @@
 			{
 				limit = 
 				{
-					has_active_production_method = pm_simple_farming
+					OR = 
+					{
+						has_active_production_method = pm_simple_farming
+						
+						has_active_production_method = pm_better_simple_farming
+					}
 				}
 			}
 			trigger_if = 
@@ -33,6 +38,10 @@
 						has_active_production_method = pm_soil_enriching_farming
 						has_active_production_method = pm_fertilization
 						has_active_production_method = pm_chemical_fertilizer
+						
+						has_active_production_method = pm_better_soil_enriching_farming
+						has_active_production_method = pm_better_fertilization
+						has_active_production_method = pm_better_chemical_fertilizer
 					}
 				}
 				better_market_good_not_expensive = { MARKET_GOOD = mg:fertilizer }
