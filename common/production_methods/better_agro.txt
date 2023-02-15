@@ -73,11 +73,11 @@ pm_better_fertilization = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods													
-			building_input_fertilizer_add = 15		
+			building_input_fertilizer_add = 10		
 		}
 		
 		unscaled = {
-			building_throughput_mult = 0.80
+			building_throughput_mult = 1.00
 		}
 
 		level_scaled = {
@@ -101,7 +101,7 @@ pm_better_chemical_fertilizer= {
 		}		
 		
 		unscaled = {
-			building_throughput_mult = 1.25
+			building_throughput_mult = 1.50
 		}
 
 		level_scaled = {
