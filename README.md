@@ -11,3 +11,6 @@ A mod for Victoria 3. The autobuild function has been revised. So that this now 
 The following mods are not supported:
 - Improved Automation (Overwrites mod important data)
 - Anbeeld's Revision of AI works at the moment again with this mod, but it currently does not support the new feature(Invesment)
+
+
+Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2931889759
