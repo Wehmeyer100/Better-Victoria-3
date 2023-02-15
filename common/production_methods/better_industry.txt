@@ -44,7 +44,7 @@ pm_better_elec_simple = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods													
-			building_input_electricity_add = 10		
+			building_input_electricity_add = 15	
 		}
 		
 		unscaled = {
@@ -53,8 +53,8 @@ pm_better_elec_simple = {
 
 		level_scaled = {
 			# earnings									
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 300
+			building_employment_machinists_add = 200
+			building_employment_engineers_add = 25
 		}
 	}
 }
@@ -70,7 +70,7 @@ pm_better_elec_complex = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods													
-			building_input_electricity_add = 20		
+			building_input_electricity_add = 30
 		}
 		
 		unscaled = {
@@ -79,8 +79,8 @@ pm_better_elec_complex = {
 
 		level_scaled = {
 			# earnings										
-			building_employment_machinists_add = 1500
-			building_employment_engineers_add = 500
+			building_employment_machinists_add = 300
+			building_employment_engineers_add = 50
 		}
 	}
 }
