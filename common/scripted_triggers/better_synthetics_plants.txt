@@ -27,6 +27,28 @@
 				better_market_good_not_expensive = { MARKET_GOOD = mg:wood }
 				better_market_good_not_cheap = { MARKET_GOOD = mg:silk }
 			}
+		}		
+		OR = 
+		{
+			trigger_if = 
+			{
+				limit = 
+				{
+					has_active_production_method = pm_better_elec_none
+				}
+			}
+			trigger_if = 
+			{
+				limit = 
+				{	
+					OR = 
+					{
+						has_active_production_method = pm_better_elec_simple
+						has_active_production_method = pm_better_elec_complex
+					}
+				}
+				better_market_good_not_expensive = { MARKET_GOOD = mg:electricity }
+			}
 		}
 	}
 }

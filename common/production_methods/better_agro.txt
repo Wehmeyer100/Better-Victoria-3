@@ -3,7 +3,6 @@
 	
 	building_modifiers = {
 		workforce_scaled = {
-			building_output_grain_add = -15
 			building_output_fruit_add = 15
 		}
 	}
@@ -14,7 +13,6 @@ pm_better_suger = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			building_output_grain_add = -15
 			building_output_sugar_add = 15
 		}
 	}
@@ -25,6 +23,7 @@ pm_better_simple_farming = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
 		unscaled = {
+			building_input_mult = -0.10
 			building_throughput_mult = 0.20
 		}
 
@@ -51,6 +50,7 @@ pm_better_soil_enriching_farming= {
 		}		
 		
 		unscaled = {
+			building_input_mult = -0.225
 			building_throughput_mult = 0.45
 		}
 
@@ -77,6 +77,7 @@ pm_better_fertilization = {
 		}
 		
 		unscaled = {
+			building_input_mult = -0.50
 			building_throughput_mult = 1.00
 		}
 
@@ -101,6 +102,7 @@ pm_better_chemical_fertilizer= {
 		}		
 		
 		unscaled = {
+			building_input_mult = -0.75
 			building_throughput_mult = 1.50
 		}
 
@@ -111,4 +113,85 @@ pm_better_chemical_fertilizer= {
 			building_employment_clergymen_add = 300
 		}
 	}
-}	
+}								
+
+pm_no_secondary = {
+	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = 30
+		}
+	}
+}
+
+pm_potatoes = {
+	texture = "gfx/interface/icons/production_method_icons/potatoes.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = 10
+			building_output_liquor_add = 15
+		}
+	}
+}
+
+pm_apple_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = 10
+			building_output_fruit_add = 10
+			building_output_sugar_add = 5
+		}
+	}
+}
+
+pm_citrus_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = 10
+			building_output_fruit_add = 9
+			building_output_sugar_add = 6
+		}
+	}
+}
+
+pm_vineyards = {
+	texture = "gfx/interface/icons/production_method_icons/vineyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = 15
+			building_output_wine_add = 8
+			building_employment_shopkeepers_add = 200
+		}
+	}
+}
+
+pm_fig_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = 15
+			building_output_fruit_add = 6
+			building_output_sugar_add = 9
+		}
+	}
+}						
+
+pm_vineyards_building_maize_farm = {
+	texture = "gfx/interface/icons/production_method_icons/vineyards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_output_grain_add = 18
+			building_output_wine_add = 6
+			building_employment_shopkeepers_add = 150
+		}
+	}
+}
